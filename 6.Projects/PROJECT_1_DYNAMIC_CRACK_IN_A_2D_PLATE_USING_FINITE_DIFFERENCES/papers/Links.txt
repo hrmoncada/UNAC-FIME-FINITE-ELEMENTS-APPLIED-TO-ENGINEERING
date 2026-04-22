@@ -1,0 +1,30 @@
+Finite Difference Method For Transient Heat Transfer
+https://github.com/slehmann1/TemperatureFDM
+
+Heat and Mass Transfer Project 3: 2D Steady-State Heat Transfer Analysis
+https://sadjadabedi.ir/heat-2d-steady-state/
+https://github.com/Sad-Abd?tab=repositories
+
+https://resources.system-analysis.cadence.com/blog/msa2022-explaining-the-finite-difference-method-and-heat-transfer
+
+
+The Finite Difference Method (2D)
+https://www.youtube.com/watch?v=8MP9rDxfpDI
+
+Solving 2D Heat Equation Numerically using Python
+https://levelup.gitconnected.com/solving-2d-heat-equation-numerically-using-python-3334004aa01a
+
+
+PDEs: Solution of the 2D Heat Equation using Finite Differences
+https://numfactory.upc.edu/web/NumMethods/PDE/PDECalor.html
+
+José Luis de la Fuente O'Connor
+MSc in Engineering-Economic Systems, Stanford University ∎
+Doctor Ingeniero Industrial, Universidad Politécnica de Madrid
+https://www.jldelafuenteoconnor.es/
+
+Vol 40, No 2 (2022): Revista Integración, temas de matemáticas
+https://revistas.uis.edu.co/index.php/revistaintegracion/issue/view/810
+
+Ecuaciones en Derivadas Parciales y Análisis Numérico
+https://dcain.etsin.upm.es/~pablo/edpan/cap3.pdf

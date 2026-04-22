@@ -1,0 +1,363 @@
+\documentclass[a4paper,10pt]{exam}
+\usepackage[utf8]{inputenc} % Para caracteres acentuados
+\usepackage{amsmath}        % Paquete para matem\'aticas avanzadas
+\usepackage{amssymb}        % Símbolos matem\'aticos
+\usepackage{graphicx}       % Para insertar gr\'aficos
+\usepackage{multicol}       % Para varias columnas de preguntas
+\usepackage{blkarray}
+\usepackage{enumitem}       % enumerate alpha numerico
+\usepackage{hyperref}
+% \topmargin = -0.5in      %
+% \evensidemargin = -.1in     %
+% \oddsidemargin = -.6in      %
+% \textwidth = 7.6in        %
+% \textheight = 9.5in       %
+% \headsep = 0.25in
+\linespread{1}
+\usepackage
+[
+        a4paper,% other options: a3paper, a5paper, etc
+        left=1cm,
+        right=1cm,
+        top=1cm,
+        bottom=1cm,
+        % use vmargin=2cm to make vertical margins equal to 2cm.
+        % us  hmargin=3cm to make horizontal margins equal to 3cm.
+        % use margin=3cm to make all margins  equal to 3cm.
+]
+{geometry}
+
+\usepackage{xcolor}
+% for shaded/shaded*
+\usepackage{framed} 
+\colorlet{shadecolor}{red!10}
+% for tcolorbox
+\usepackage{tcolorbox}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Enumerate subsection start in 1
+\renewcommand{\thesubsection}{\arabic{subsection}}
+%\renewcommand{\thesubsection}{\Alph{subsection}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Graphs path to the Picture Folder
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\graphicspath{/home/henry/Desktop/UTEP_Proposal_Thesis/PhD_Thesis/Pictures}
+\graphicspath{{Pictures/}{Data/}} % Two folders Picture and Data
+% Encabezado
+\title{\textbf{PROJECTO 1\\
+MÉTODO DE DIFERENCIAS FINITAS EN 2D\\
+SIMULACIÓN DE PROPAGACIÓN DE GRIETAS/FRACTURAS DINÁMICAS}\\
+\vspace{0.1cm}
+Fecha de entrega: Lunes 1 de Junio de 2026}
+%\author{Profesor(a): [Tu Nombre]}
+%\date{20 de Setiembre 2024}
+\date{} % clear date
+\begin{document}
+\maketitle
+\vspace{-1.5cm}
+
+\section{Descripción del Proyecto}
+El presente proyecto tiene como objetivo aplicar el \textbf{Método de Diferencias Finitas (MDF) en dos dimensiones (2D) para simular la propagación dinámica de una grieta en una placa cuadrada}. El dominio continuo $\Omega$ será discretizado en una malla de nodos, reemplazando las derivadas espaciales de la ecuación de movimiento por aproximaciones algebraicas. La evolución temporal se realizará mediante un esquema explícito, como el método de \textit{Leapfrog o RK}. El crecimiento de la grieta será evaluado mediante el análisis de tensiones en la punta de la misma.
+
+\section{Objetivos}
+Simular computacionalmente la propagación dinámica de una grieta en una placa bidimensional utilizando MDF.
+
+\subsection*{Objetivos específicos}
+\begin{itemize}
+\item Discretizar una placa cuadrada en una malla 2D.
+\item Implementar el esquema de diferencias finitas para la ecuación de onda/elástica.
+\item Aplicar un esquema temporal explícito (Leapfrog o RK).
+\item Evaluar tensiones en la punta de la grieta.
+\item Modelar el avance de la grieta bajo carga dinámica.
+\end{itemize}
+
+\section*{Formulación Matemática}
+
+Se considera la ecuación de movimiento:
+
+\[
+\frac{\partial^2 u}{\partial t^2} = c^2 \left( \frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial y^2} \right)
+\]
+
+Discretización en diferencias finitas usando esquema temporal explícito (Leapfrog o RK).
+% 
+% \[
+% u_{i,j}^{n+1} = 2u_{i,j}^n - u_{i,j}^{n-1} + r^2
+% \left(u_{i+1,j}^n + u_{i-1,j}^n + u_{i,j+1}^n + u_{i,j-1}^n - 4u_{i,j}^n \right)
+% \]
+% 
+% donde:
+% 
+% \[
+% r = \frac{c \Delta t}{\Delta x}
+% \]
+
+% \section{Modelado de la Grieta}
+% 
+% \begin{itemize}
+% \item La grieta se representa como una discontinuidad en la malla.
+% \item En los nodos de la grieta:
+% \begin{itemize}
+% \item Se eliminan conexiones (condición de frontera interna).
+% \item Se imponen condiciones de esfuerzo nulo.
+% \end{itemize}
+% \item El crecimiento se basa en un criterio:
+% \[
+% \sigma_{\text{punta}} > \sigma_{\text{crítica}}
+% \]
+% \end{itemize}
+
+\section{Modelado de la Grieta}
+
+\begin{itemize}
+\item La grieta se modela como una \textbf{discontinuidad geométrica y mecánica} dentro de la malla de diferencias finitas, representada mediante la desconexión selectiva de nodos adyacentes.
+
+\item En los nodos pertenecientes a la grieta:
+\begin{itemize}
+\item Se eliminan las interacciones entre nodos a ambos lados de la grieta (condición de frontera interna).
+\item Se imponen condiciones de \textbf{tracción nula} (esfuerzo normal y cortante iguales a cero sobre las caras de la grieta).
+\end{itemize}
+
+\item El crecimiento de la grieta se evalúa en la \textbf{punta de la grieta}, utilizando un criterio basado en el estado tensional local.
+
+\item \textbf{Criterio de propagación de la grieta:}
+
+El crecimiento de la grieta se evalúa en la vecindad de su punta, donde se concentran los mayores esfuerzos. En el marco del Método de Diferencias Finitas, el esfuerzo en la punta se aproxima a partir de los gradientes de desplazamiento o deformación.
+
+El criterio básico de propagación se establece como:
+\[
+\sigma_{\text{punta}} \geq \sigma_{\text{crítica}}
+\]
+
+donde:
+\begin{itemize}
+\item \(\sigma_{\text{punta}}\) es el esfuerzo efectivo evaluado en el nodo más cercano a la punta de la grieta.
+\item \(\sigma_{\text{crítica}}\) es el esfuerzo límite del material, asociado a su resistencia a la fractura.
+\end{itemize}
+
+\vspace{0.2cm}
+
+\textbf{Aproximación numérica del esfuerzo en la punta:}
+
+El esfuerzo puede estimarse a partir de la ley constitutiva lineal:
+\[
+\sigma \approx E \, \frac{\partial u}{\partial x}
+\]
+
+y, en forma discreta:
+\[
+\sigma_{\text{punta}} \approx E \, \frac{u_{i+1,j} - u_{i-1,j}}{2\,\Delta x}
+\]
+
+o, en 2D, utilizando el tensor de esfuerzos equivalente.
+
+
+
+\textbf{Criterio direccional de propagación:}
+
+Una vez que se cumple la condición de falla, la grieta se extiende hacia el nodo vecino en la dirección del \textbf{máximo esfuerzo principal} o del mayor gradiente de deformación:
+\[
+\theta = \arg \max \left( \sigma_{\text{principal}} \right)
+\]
+
+
+\textbf{Actualización de la grieta:}
+
+\begin{itemize}
+\item Se identifica el nodo candidato en la dirección de propagación.
+\item Se elimina la conectividad entre dicho nodo y sus vecinos en la dirección de apertura.
+\item Se actualizan las condiciones de frontera internas (tracción nula).
+\end{itemize}
+
+
+
+\textbf{Nota:} Para modelos más avanzados, el criterio puede basarse en mecánica de fractura lineal elástica (LEFM), empleando el factor de intensidad de esfuerzos:
+\[
+K_I \geq K_{IC}
+\]
+lo cual proporciona una descripción más precisa del comportamiento en la punta de la grieta.
+
+\item Alternativamente, en un enfoque más riguroso de mecánica de fractura, el crecimiento puede evaluarse mediante el \textbf{factor de intensidad de esfuerzos}:
+\[
+K_I \geq K_{IC}
+\]
+donde \(K_I\) es el factor de intensidad de modo I y \(K_{IC}\) es la tenacidad a la fractura del material.
+
+\item Una vez satisfecho el criterio, la grieta se propaga en la dirección de máxima liberación de energía o en la dirección normal al máximo esfuerzo principal.
+
+\end{itemize}
+
+\section{Metodología de Implementación}
+
+El estudiante deberá seguir los siguientes pasos:
+\begin{multicols}{2}
+\subsection*{Paso 1: Discretización}
+\begin{itemize}
+\item Definir el dominio $[0,L]\times[0,L]$
+\item Elegir número de nodos $N_x, N_y$
+\item Definir $\Delta x, \Delta t$
+\end{itemize}
+
+\subsection*{Paso 2: Condiciones iniciales}
+\begin{itemize}
+\item Definir desplazamiento inicial $u(x,y,0)$
+\item Definir velocidad inicial $\frac{\partial u}{\partial t}(x,y,0)$
+\end{itemize}
+
+\subsection*{Paso 3: Condiciones de frontera}
+\begin{itemize}
+\item Bordes fijos: $u=0$
+\item Bordes libres o carga dinámica (opcional)
+\end{itemize}
+
+\subsection*{Paso 4: Implementación numérica}
+\begin{itemize}
+\item Crear matriz $u[i,j]$
+\item Implementar esquema explícito (Leapfrog o RK)
+\item Iterar en el tiempo
+\end{itemize}
+
+\subsection*{Paso 5: Modelado de la grieta}
+\begin{itemize}
+\item Definir ubicación inicial
+\item Eliminar interacción entre nodos de la grieta
+\item Actualizar crecimiento según criterio físico
+\end{itemize}
+
+\subsection*{Paso 6: Evaluación de tensiones}
+\begin{itemize}
+\item Aproximar gradientes
+\item Calcular esfuerzo en la punta
+\end{itemize}
+
+\subsection*{Paso 7: Visualización}
+\begin{itemize}
+\item Gráficas 2D (mapas de calor)
+\item Animación de propagación
+\end{itemize}
+\end{multicols}
+
+\section{Requisitos de Implementación}
+
+El proyecto debe ser desarrollado en:
+
+\begin{itemize}
+\item \textbf{Python} (NumPy, Matplotlib), o
+\item \textbf{C++} (vectores o matrices dinámicas)
+\end{itemize}
+
+\section{Elaboración de un artículo científico}
+
+El estudiante deberá presentar un artículo científico (máximo 10 páginas), redactado en \LaTeX, cuyo título será:
+
+\begin{center}
+\Large\textcolor{blue}{\textbf{Simulación de la Propagación de Grietas/Fracturas Dinámicas en 2D mediante el Método de Diferencias Finitas}}
+\end{center}
+
+El artículo deberá estructurarse de manera clara y coherente, incluyendo los siguientes apartados:
+
+\begin{itemize}
+\item \textbf{Resumen (Abstract)}
+\item \textbf{Introducción}
+\item \textbf{Marco teórico}
+\item \textbf{Metodología e implementación del algoritmo}
+\item \textbf{Resultados y visualización gráfica}
+\item \textbf{Análisis del comportamiento de la grieta}
+\item \textbf{Conclusiones}
+\item \textbf{Bibliografia}
+\item \textbf{Anexo: Código fuente debidamente documentado}
+\end{itemize}
+
+Se evaluará la claridad en la redacción, el rigor técnico, la correcta interpretación de resultados y la calidad de la implementación computacional.
+
+\section*{Recomendaciones}
+\begin{itemize}
+\item Verificar estabilidad ($r \leq 1$)
+\item Usar mallas pequeñas inicialmente
+\item Validar con casos simples
+\end{itemize}
+
+\section{Links}
+\begin{itemize}
+\item \href{Crack Analysis of 2D Plates: A Step-by-Step Guide Using ABAQUS Software}{https://www.youtube.com/watch?v=miUDHRq-B0o}
+\item \href{Stress Analysis in Long Cylinders: A Step-by-Step Guide Using ABAQUS Software}{https://www.youtube.com/watch?v=lYXt7BViiEI}
+\item \href{UNAC-FIME-NUMERICAL-METHODS/5.Books/}{https://github.com/hrmoncada/UNAC-FIME-NUMERICAL-METHODS/tree/main/5.Books}
+\end{itemize}
+
+
+\begin{center}
+\Large \textbf{¡Éxitos en el desarrollo del proyecto!}
+\end{center}
+
+
+\section*{Criterios de Evaluación : Rubrica (100 \%)}
+
+La evaluación del proyecto se realizará sobre un total de \textbf{100 puntos}, distribuidos en dos componentes principales: \textbf{(i) artículo científico} y \textbf{(ii) resultados e implementación computacional}.
+
+\subsection*{Parte 1: Artículo científico (40 puntos)}
+
+\begin{center}
+\begin{tabular}{|l|c|}
+\hline
+\textbf{Criterio} & \textbf{Puntaje} \\
+\hline
+Calidad de redacción, coherencia y estructura del artículo & 15 \\
+Marco teórico y formulación matemática del problema & 10 \\
+Descripción de la metodología e implementación del algoritmo & 10 \\
+Conclusiones y discusión crítica de resultados & 5 \\
+\hline
+\textbf{Subtotal} & \textbf{40} \\
+\hline
+\end{tabular}
+\end{center}
+
+\subsection*{Parte 2: Resultados e implementación (60 puntos)}
+
+\begin{center}
+\begin{tabular}{|l|c|}
+\hline
+\textbf{Criterio} & \textbf{Puntaje} \\
+\hline
+Correcta implementación numérica (MDF en 2D) & 20 \\
+Modelado físico de la propagación de la grieta & 15 \\
+Calidad y organización del código (claridad, modularidad, documentación) & 10 \\
+Resultados numéricos y visualización gráfica & 10 \\
+Análisis e interpretación de resultados & 5 \\
+\hline
+\textbf{Subtotal} & \textbf{60} \\
+\hline
+\end{tabular}
+\end{center}
+
+\bigskip
+
+Se valorará especialmente la claridad en la exposición, el rigor técnico, la consistencia entre el modelo físico y la implementación numérica, así como la capacidad del estudiante para integrar teoría, simulación y análisis en un documento científico coherente.
+
+\section*{Formato de entrega}
+Envía su tarea en un archivo comprimido \textbf{(ZIP o RAR)} a través de la plataforma de \textbf{Google Classroom}. Asegúrate de que tu archivo contenga los siguientes archivos:  
+\begin{itemize}
+\item Un archivo \LaTeX\;  con una descripción detallada de la solución de cada uno de los poblemas. 
+\item Mueva toda los archivos que forman parte de su tarea dentro de un folder (ver ejemplo). Incluye los siguientes elementos: \texttt{*.pdf}, \texttt{*.tex}, \texttt{*.bib}, y la carpeta de figuras \verb+Pictures/+ y datos \verb+Data/+.
+\begin{verbatim}
+Projecto_1_Apellido_Nombre/
+|--Data/
+|--Projecto_1_Apellidos_Nombres.pdf
+|--Projecto_1_Apellidos_Nombres.tex
+|--Pictures/
+|   |--Escudo_UNAC.png
+|   |--fig1.png
+|   |--fig2.pdf
+|-- References/
+    |--myBibliography.bib
+\end{verbatim}
+
+\item Comprima el folder de la tarea usardo ZIP o RAR (ver ejemplos).
+\begin{verbatim}
+Projecto_1_Apellido_Nombre.zip    o     Projecto_1_Apellido_Nombre.rar
+\end{verbatim}
+\item Subir la tarea al repositorio de google classroom, con al menos 30 minutos de antes de finalizada la fecha y hora de entrega.  
+\item Asegurece que proceso de entrega se a realizado correctamente
+\end{itemize}
+
+\end{document}
+

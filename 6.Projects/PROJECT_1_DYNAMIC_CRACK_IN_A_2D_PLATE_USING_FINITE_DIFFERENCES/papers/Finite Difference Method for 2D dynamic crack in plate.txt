@@ -1,0 +1,50 @@
+Finite Difference Method for 2D dynamic crack in plate
+
+The Finite Difference Method (FDM) for 2D dynamic cracks in plates discretizes governing elastodynamic equations onto a mesh, utilizing Taylor series expansions to approximate spatial and temporal derivatives. For propagating cracks, techniques like localized mesh refinement near the crack tip (often with moving-least square approximation) or specialized boundary nodes are used to handle stress singularities.
+
+Approach to Dynamic Cracks: The Generalized Finite Difference Method (GFDM) is frequently used, discretizing the domain into overlapping subdomains to handle the high strain gradients at the moving crack tip, often achieving high accuracy in determining dynamic stress intensity factors (SIFs).
+
+Time Discretization: The dynamic problem (often using Navier's equations) is transformed into a series of static equations at each time node, often solved using explicit time-integration methods to capture transient effects.
+
+Modeling Crack Growth: The crack path is generally determined by evaluating crack tip criteria (such as the maximum circumferential stress theory) to determine the next propagation direction.
+
+Alternative Techniques: While classical FDM uses structured grids, newer methods like meshless GFDM, or coupled methods (e.g., Boundary Element Method-Peridynamics), are implemented to handle complex boundary geometries more easily than pure finite difference approaches.
+
+The Generalized Finite Difference Method (GFDM) provides an efficient way to simulate these cracks without the complex remeshing needed in traditional Finite Element Methods (FEM), especially when modeling crack branching and complex fracture trajectories.
+====================================================================================================
+Método de Diferencias Finitas en 2D, grieta dinámica en una placa
+
+Método de Diferencias Finitas (MDF) en 2D simula la propagación de una grieta dinámica en una placa discretizando el dominio continuo en una malla de nodos, reemplazando las derivadas espaciales de la ecuación de movimiento con aproximaciones algebraicas. Se utiliza un esquema temporal (como leapfrog) para avanzar en el tiempo, evaluando las tensiones en la punta de la grieta para determinar su crecimiento bajo carga dinámica.
+
+Aspectos Clave del Método para Grieta Dinámica:
+
+	Discretización (Malla): La placa se divide en una red de nodos, a menudo irregular para acomodar la geometría de la grieta.
+
+	Aproximación de Derivadas: Se usan fórmulas de diferencias centradas, hacia adelante o hacia atrás para convertir las ecuaciones diferenciales parciales (elásticas o de movimiento) en sistemas de ecuaciones algebraicas.
+
+	Propagación de Grieta: La grieta se modela "abriendo" nodos o eliminando la conexión entre ellos cuando la intensidad de tensión en la punta supera un valor crítico.
+
+	Esquema Temporal: Generalmente se emplea un método explícito (ej. leapfrog) que es eficiente para resolver la dinámica transitoria, calculando el siguiente estado a partir del actual.
+
+Aplicación típica (2D):
+
+	Definir la placa: Geometría, propiedades del material (densidad, módulos elásticos) y condiciones de contorno (cargas rápidas/impacto).
+	Inicializar la grieta: Definir la fisura inicial en la malla.
+	Iteración temporal:Calcular campos de desplazamiento y tensión.
+	Evaluar el criterio de fisura en la punta.Actualizar la geometría de la grieta si se cumplen las condiciones.
+
+Repetir para el tiempo de simulación deseado.
+
+Nota: Aunque el MDF es potente, para geometrías complejas de grietas, el [Método de Elementos Finitos (FEM)] a menudo se prefiere por su versatilidad en mallas complejas.
+
+====================================================================================================
+Crack Analysis of 2D Plates: A Step-by-Step Guide Using ABAQUS Software
+https://www.youtube.com/watch?v=miUDHRq-B0o
+
+"Stress Analysis in Long Cylinders: A Step-by-Step Guide Using ABAQUS Software"
+https://www.youtube.com/watch?v=lYXt7BViiEI
+
+Método de Diferencias Finitas en 2D, grieta dinámica en una placa
+Marco computacional para el crecimiento de grietas en 2D basado en el Método de Elementos Finitos Adaptativo
+
+Cracks and Fracture, K. Bertram Broberg
