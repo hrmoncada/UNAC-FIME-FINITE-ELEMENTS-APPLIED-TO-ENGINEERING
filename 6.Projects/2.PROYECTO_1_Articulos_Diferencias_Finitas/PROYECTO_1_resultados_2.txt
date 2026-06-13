@@ -1,0 +1,65 @@
+# Observaciones a los Proyectos
+
+## 1. PROYECTO 1 – Henríquez, Julio César Ugarte Arias y Gallardo Christian Salinas
+
+* El nombre del archivo fuente en LaTeX debe coincidir con el nombre del archivo PDF generado.
+* El código fuente se encuentra presente; sin embargo, debe incluirse como un anexo al final del artículo.
+* El trabajo tiene formato de artículo científico, por lo que no es necesaria una carátula. Se recomienda eliminarla.
+* Las figuras no cuentan con una descripción adecuada. Aunque se presentan como subsecciones, cada figura debe incluir un título (caption) y una descripción que permita su correcta interpretación. Además, todas las figuras deben ser referenciadas y discutidas en el texto del artículo.
+* Si bien se incluyen referencias bibliográficas, ninguna de ellas es citada dentro del cuerpo del documento. Las referencias deben utilizarse para sustentar afirmaciones, metodologías o resultados presentados en el artículo.
+
+---
+
+## 2. PROYECTO 1 – Arce Pacheco, Cáceres Vargas y Vítor Ayala
+
+* El nombre del archivo fuente en LaTeX coincide con el archivo PDF generado.
+* No se adjunta el código fuente. Las imágenes del código no sustituyen al código original, por lo que no es posible verificar su funcionamiento.
+* La inclusión del nombre de la universidad en el encabezado del artículo es innecesaria. Se recomienda eliminarlo. En caso de considerarlo importante, puede incluirse al final del documento, en la sección de agradecimientos.
+* Aunque el artículo presenta referencias bibliográficas, estas no son citadas en el texto.
+* Para incluir código fuente en el documento, se recomienda utilizar el entorno `latex-verbatim`.
+
+---
+
+## 3. Proyecto_1_Andres_Buiza_Cardenas
+
+* El nombre del archivo fuente en LaTeX coincide con el archivo PDF generado.
+* El código fuente está presente.
+* Se valora el esfuerzo de presentar el resumen en inglés; sin embargo, para este proyecto se recomienda redactar el artículo completamente en castellano, ya que el objetivo principal es evaluar los resultados y el desarrollo del trabajo, no la competencia en un idioma extranjero.
+* Las referencias bibliográficas están ausentes o presentan un formato incorrecto; es necesario corregirlas.
+* Se recomienda utilizar `latex-href` para incorporar enlaces electrónicos, permitiendo acceder a ellos directamente desde el documento PDF sin necesidad de copiar y pegar las direcciones web.
+
+---
+
+## 4. Proyecto_1_Discapacita2(2)
+
+* El nombre del archivo fuente en LaTeX coincide con el archivo PDF generado.
+* El código fuente está presente.
+* Se reconoce el esfuerzo de incluir el resumen en inglés; sin embargo, se recomienda que el artículo sea redactado íntegramente en castellano.
+* Las referencias bibliográficas son insuficientes o presentan un formato inadecuado; deben corregirse.
+* Aunque se incluyen referencias, estas no son citadas dentro del texto del artículo.
+* Para la presentación del código fuente, se recomienda emplear el entorno `latex-verbatim`.
+
+---
+
+## 5. PROYECTO_2__DESASTRES NATURALES
+
+* El nombre del archivo fuente en LaTeX no coincide con el nombre del archivo PDF generado.
+* El código fuente está presente. Si el programa fue desarrollado en Python, el archivo debe conservar la extensión `.py`; de igual manera, si fue desarrollado en C++, debe conservar su extensión correspondiente.
+* El código debe incluirse al final del documento como un apéndice, acompañado de una breve descripción de su implementación.
+* El cuerpo principal del artículo debe centrarse en la fundamentación teórica, la metodología empleada y el análisis de los resultados obtenidos.
+* Se recomienda trasladar todas las secciones de código al apéndice correspondiente.
+* Si alguna parte específica del código requiere una explicación detallada, esta puede incluirse en el texto principal, indicando la referencia al anexo donde se encuentra el código completo.
+* Aunque el artículo incluye referencias bibliográficas, estas no son utilizadas dentro del texto.
+* Para insertar código fuente en el documento, se recomienda utilizar el entorno `latex-verbatim`.
+
+---
+
+## 6. PROYECTO1_2D_Jlopez_Dquispe_Ssuyuri
+
+* El nombre del archivo fuente en LaTeX coincide con el archivo PDF generado.
+* El código fuente está presente.
+* Se aprecia el esfuerzo de redactar el resumen en inglés; sin embargo, se recomienda que el artículo sea presentado completamente en castellano.
+* Las referencias bibliográficas son insuficientes o presentan un formato incorrecto; deben corregirse.
+* Aunque existen referencias bibliográficas, ninguna es citada en el desarrollo del artículo.
+* Se recomienda utilizar el entorno `latex-verbatim` para la inclusión del código fuente en el documento.
+
