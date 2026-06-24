@@ -1,0 +1,5 @@
+1. Use GMS to get plane.msh (t7)
+Diana:example_0_gmsh_tutorial$ ./gmsh plane.geo
+1.1 Click on Mesk 2D
+1.2 File + Save mesh
+1.3 Check folder for plane.msh

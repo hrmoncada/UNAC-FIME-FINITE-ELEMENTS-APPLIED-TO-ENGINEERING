@@ -1,0 +1,93 @@
+1. Use GMS to get rectwin.msh
+Diana:example_0_gmsh_tutorial$ ./gmsh rectwin2.geo
+
+1.1 Click on Mesk 2D
+1.2 File + Save mesh
+1.3 Check folder for rectwin2.msh
+
+2. Use Elmer to folder rectwin2/
+Diana:example_0_gmsh_tutorial$ ElmerGrid 14 2 rectwin2.msh
+
+Starting program Elmergrid, compiled on Jul 20 2023
+Elmergrid reading in-line arguments
+Output will be saved to file rectwin2.
+
+Elmergrid loading data:
+-----------------------
+Format chosen using the first line: $MeshFormat
+Gmsh version is 4.1
+Loading mesh in Gmsh format 4.1 from file rectwin2.msh
+Reading 4 entities in 0D
+Reading 4 entities in 1D
+Reading 1 entities in 2D
+Allocating for 1064 knots and 2126 elements.
+Leading element dimension is 2
+Allocating lookup table for tags of size 5
+Defined 4 0DIM entities with geometric tag range [1 4]
+Defined 4 1DIM entities with geometric tag range [1 4]
+   Physical given tag range is [-1 -1]
+   Physical read tag range is [7 10]
+Defined 1 2DIM entities with geometric tag range [5 5]
+   Physical given tag range is [-1 -1]
+   Physical read tag range is [6 6]
+Physical tag offset for 0D is 0
+Geometric tag offset for 0D is 4
+Reading 1064 nodes in 9 blocks.
+Reading 2126 elements in 5 blocks.
+Mapping mesh tag 1 to physical tag 9 in 1DIM
+Mapping mesh tag 2 to physical tag 7 in 1DIM
+Mapping mesh tag 3 to physical tag 10 in 1DIM
+Mapping mesh tag 4 to physical tag 8 in 1DIM
+Mapping mesh tag 5 to physical tag 6 in 2DIM
+Moving bulk elements to boundary elements
+Leading bulk elementtype is 303
+Trailing bulk elementtype is 202
+There are 216 (out of 2126) lower dimensional elements.
+Node 217 belongs to maximum of 7 elements
+Found correctly 216 side elements.
+Parent elements were reordered up to index 1910.
+Moved 1910 elements (out of 2126) to new positions
+Successfully read the mesh from the Gmsh input file.
+Using physical numbering of entities
+
+Elmergrid creating and manipulating meshes:
+-------------------------------------------
+
+Elmergrid saving data with method 2:
+-------------------------------------
+Saving mesh in ElmerSolver format to directory rectwin2.
+Saving 1064 coordinates to mesh.nodes.
+Saving 1910 element topologies to mesh.elements.
+Saving boundary elements to mesh.boundary.
+Saving header info to mesh.header.
+
+Thank you for using Elmergrid!
+Send bug reports and feature wishes to elmeradm@csc.fi
+
+
+3. Open elmerGUI
+GITHUB
+https://github.com/ElmerCSC/elmerfem
+
+INSTALL LINUX
+Linux :There is a Linux version at launchpad that can be used on Ubuntu and Debian based systems:
+
+$ sudo apt-add-repository ppa:elmer-csc-ubuntu/elmer-csc-ppa
+$ sudo apt-get update
+
+ElmerFEM suite without ElmerGUI
+$ sudo apt-get install elmerfem-csc
+
+ElmerFEM suite with ElmerGUI (pick this one)
+$ sudo apt-get install elmerfem-csc-eg
+
+Also you can try to install using Ubuntu Synaptic
+
+
+4. Install paraview
+sudo apt install paraview
+
+
+
+
+
