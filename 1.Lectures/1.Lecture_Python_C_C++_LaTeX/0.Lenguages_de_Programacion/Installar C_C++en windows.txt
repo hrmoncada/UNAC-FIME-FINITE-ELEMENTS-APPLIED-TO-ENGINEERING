@@ -1,0 +1,58 @@
+1. Abrir la siguiente pagina web(Open la the following webpage)
+https://www.msys2.org/
+
+2. baja el siguiente instador (Download the installer):
+
+msys2-x86_64-20260611.exe
+
+3. Abrir msys2-x86_64-20260611.exe (open msys2-x86_64-20260611.exe)
+
+PARA C:
+	CIBER@DESKTOP-8EM67IJ UCRT64 ~
+	$ pacman -S mingw-w64-ucrt-x86_64-gcc mingw-w64-ucrt-x86_64-gdb
+
+	Escribir: "Y" y darle ENTER
+
+PARA C++
+	CIBER@DESKTOP-8EM67IJ UCRT64 ~
+	$ pacman -S --needed base-devel mingw-w64-ucrt-x86_64-toolchain
+
+	Escribir: "Y" y darle ENTER
+
+
+4. Buscar en windows (search in windows):
+ 
+1. (escribir) propiedades del sistema (open)
+2. variable de entorno (click)
+3. path (click)
+4. Editar
+
+		pegar Para C:
+		C:\msys64\mingw64\bin
+
+		pegar, Para C++:
+		C:\msys64\ucrt64\bin
+
+OTHERS
+
+https://www.codewithharry.com/blogpost/how-to-install-gnu-gcc-compiler-on-windows
+
+https://clang.llvm.org/get_started.html
+
+https://www.mingw-w64.org/
+
+https://winlibs.com/
+
+https://www.freecodecamp.org/news/how-to-install-c-and-cpp-compiler-on-windows/
+
+How to install GNU GCC 64 compiler for C languages
+
+To install the GNU GCC 64 compiler for C languages on Windows, follow these steps:
+
+Download MinGW: Visit the MinGW-w64 website and download the installer for your Windows version.
+Run the Installer: Execute the downloaded file and select the installation directory.
+
+Configure PATH: Open the System Properties, go to Advanced System Settings, and add the MinGW bin directory to the PATH environment variable.
+Verify Installation: Open the Command Prompt and type gcc --version to check if GCC is installed correctly.
+
+For Linux and macOS, the installation process is similar, with Homebrew being the preferred method for macOS users

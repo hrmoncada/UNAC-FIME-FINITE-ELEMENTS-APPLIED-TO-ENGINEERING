@@ -1,0 +1,112 @@
+***********************************************
+1.PROYECTO 1 HENRIQUEZ JULIO CESAR, UGARTE SALINAS, ARIAS GALLARDO CHRISTIAN SALINAS (FEM)
+***********************************************
+latex nombre del archivo, coincide con la el archivo resultante pdf 
+código presente, como anexo, al final
+Es un articulo, no se necesita caratula, remover caratula
+las figuras no presentan descripcion, aunque usted la pone como subsecciones, cada figura debe presentar su etiqueta y descripcion adjunta a la figura, esa refrecia lo ayudra a dexcribir en ele articulo, no se encontro ningua referecia o descriptcion del las figurar el articulo.
+Aunque su articulo presenta refrecias bibliograficas, ningun parafo los tienes asignados o mensionados, las refrecia se pone para ser usadas en el articulo
+
+===================================================================
+PARTE 2:
+===================================================================
+No titulo, no autore, no palabras de referenciales (keywords), 
+Implementacion de elementos finitos, 
+No se nota la fractura en la figuras 2D, aunque presenta un grafico donde se muestra la evolucion de la  longitud de Fractura o grieta con el tiempo. 
+Comparado los metodos: Diferencias finitas vs elementos finitos, no sabemos cual es mas rapido, tiempo de computo, o presenta mejoraes resultdos, como una mejor imagen de fractura o grieta.
+
+***********************************************
+2.PROYECTO 1_ ARCE PACHECO _ CACERES VARGAS _ VITOR AYALA
+***********************************************
+latex nombre del archivo, coincide con la el archivo resultante pdf 
+código NO presente, figuras de un código, no es código, como  voy a verificar que tu código funciona.
+escribir el nombre de la universidad es irrelevante, remover nombre de la universidad, Si siente la necesidad de poner el nombre de su universidad puede hacerlo al final, después de las conclusiones,  como un agradecimiento
+Aunque su articulo presenta refrecias bibliograficas, ningun parafo los tienes asignados o mensionados, las refrecia se pone para ser usadas en el articulo
+Use latex-verbatim para insertad el codigo en el articulo
+
+===================================================================
+PARTE 2:
+===================================================================
+No latex, template
+No existe la implementacion de elementos finitos, 
+No se presntan la referencias bibilograficas en el articulos
+Comparado los metodos: no se presenta nada,  Diferencias finitas vs elementos finitos, 
+No presenta resultados FEM
+
+***********************************************
+3.Proyecto_1_Andres_Buiza_Cardenas
+***********************************************
+latex nombre del archivo, coincide con la el archivo resultante pdf 
+código presente
+Gran detalle , el de escribir el abstract en ingles, pero seria escribir todo en castellano, recuerda que aquí se evaluaran los resultados del proyecto, no si demuestras suficiencia de ingles
+No referencias, referencia estas muy mal presentadas, corregir 
+use latex-href para asignar el link, en el articlo, esta obsion peremite abril en browser de manera directa sin la necesidad de compiar el link y pegarlo en el browser
+
+===================================================================
+PARTE 2:
+===================================================================
+No presento projecto 2
+
+***********************************************
+4.Proyecto_1_Discapacita2(2)  (FEM)
+***********************************************
+\author[1]{Renzo Piero Salazar Robles}
+\author[2]{Melody Mamani Quispe}
+\author[3]{Patrick Polo Suabsnabar}
+
+latex nombre del archivo, coincide con la el archivo resultante pdf 
+código presente
+Gran detalle , el de escribir el abstract en ingles, pero seria escribir todo en castellano, recuerda que aquí se evaluaran los resultados del proyecto, no si demuestras suficiencia de ingles.
+No referencias. referencia estas muy mal presentadas, corregir 
+Aunque su articulo presenta refrecias bibliograficas, ningun parafo los tienes asignados o mensionados, las refrecia se pone para ser usadas en el articulo
+Use latex-verbatim para insertad el codigo en el articulo
+Aunque su articulo presenta refrecias bibliograficas, ningun parafo los tienes asignados o mensionados, las refrecia se pone para ser usadas en el articulo
+Use latex-verbatim para insertad el codigo en el articulo
+
+===================================================================
+PARTE 2:
+===================================================================
+Implementacion de elementos finitos, 
+Comparado los metodos: No Se presemtaron las Diferencias finitas vs elementos finitos, 
+No presenta resultados FEM
+
+***********************************************
+5.PROYECTO_2__DESASTRES NATURALES, Campodonico Maravi Herber - Rojas Meza Jhostyn  - Guido llanos Joaquin 
+***********************************************
+latex, nombre del archivo, NO coincide con la el archivo resultante pdf 
+código presente, si el código es Python, debe tener la extensión de Python, lo mismo si es c++
+El código va al final, junto con la descripción de la implementación del código, como un apéndice. El articulo debe focalizarse en la teoría, la obtención y análisis de los resultados de los resultados.
+Solo remueva la secciones de código y insértelas en la parte del anexo que describe su código.
+Si hay una parte especial de cogido que necesita ser descrita solo se escribe de esa parte y se da la referencia de donde puede ser encontrada en el anexo.
+Aunque su articulo presenta refrecias bibliograficas, ningun parafo los tienes asignados o mensionados, las refrecia se pone para ser usadas en el articulo
+Use latex-verbatim para insertad el codigo en el articulo.
+
+===================================================================
+PARTE 2:
+===================================================================
+No existe la implementacion de elementos finitos, 
+Comparado los metodos: no se presenta nada,  Diferencias finitas vs elementos finitos, 
+No presenta resultados FEM
+
+***********************************************
+6.PROYECTO1_2D_Jlopez_Dquispe_Ssuyuri (FEM)
+***********************************************
+\author[1]{Juan de Dios López Nuñez}
+\author[2]{Saul Clinton Suyuri Suyuri}
+\author[3]{Diego Eduardo Quispe Juarez}
+
+latex nombre del archivo, coincide con la el archivo resultante pdf 
+código presente
+Gran detalle , el de escribir el abstract en ingles, pero seria escribir todo en castellano, recuerda que aquí se evaluaran los resultados del proyecto, no si demuestras suficiencia de ingles.
+No referencias. referencia estas muy mal presentadas, corregir 
+Aunque su articulo presenta refrecias bibliograficas, ningun parafo los tienes asignados o mensionados, las refrecia se pone para ser usadas en el articulo
+Use latex-verbatim para insertad el codigo en el articulo.
+Use latex-verbatim para insertad el codigo en el articulo.
+
+===================================================================
+PARTE 2:
+===================================================================
+Implementacion de elementos finitos, 
+Comparado los metodos: SE presemtaron las Diferencias finitas vs elementos finitos, 
+No presenta resultados FEM
+
