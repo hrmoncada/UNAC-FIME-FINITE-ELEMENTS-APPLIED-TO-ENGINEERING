@@ -1,0 +1,62 @@
+To build the following FEM 2D Heat Equation using the informacion contain in the following links
+
+https://people.sc.fsu.edu/~jburkardt/cpp_src/fem2d_pack/fem2d_pack.html
+https://people.sc.fsu.edu/~jburkardt/cpp_src/fem2d_pack_test/fem2d_pack_test.html
+
+%-------------------------------------------
+16.fem2d_pack_people_sc_fsu_edu
+%-------------------------------------------
+1.test
+%-------------------------------------------
+Compile:
+    chmod +x fed2d_pack.sh
+    ./fem2d_pack.sh
+ 
+fem2d_pack.sh
+	g++ -c -g -Wall fem2d_pack.cpp
+
+%-------------------------------------------
+5.fem2d_heat_test/ 
+here we build fem2d_pack_test with fem2d_pack.o + fem2d_pack_test.o
+%-------------------------------------------
+Compile:
+	chmod +x fem2d_pack_test.sh
+	./fem2d_pack_test.sh
+
+fem2d_heat_test.sh - Build the executable with the objects files
+	g++ -c -g -Wall fem2d_pack_test.cpp
+
+	g++ fem2d_pack_test.o fem2d_pack.o -lm
+
+#	chmod ugo+x a.out
+
+	mv a.out fem2d_pack_test
+
+%-------------------------------------------
+Execute fem2d_pack_test
+%-------------------------------------------
+
+Execute, the run create multiples txt 10 files : 
+	./fem2d_pack_test > fem2d_pack_test.txt
+
+OUTPUT
+  fem2d_pack_prb_q4.eps
+  fem2d_pack_prb_t3.eps
+  fem2d_pack_prb_t4.eps
+  fem2d_pack_prb_t6.eps
+  sphere_q4_elements.txt
+  sphere_q4_nodes.txt
+  sphere_q9_elements.txt
+  sphere_q9_nodes.txt
+  sphere_t3_elements.txt
+  sphere_t3_nodes.txt
+  sphere_t6_elements.txt
+  sphere_t6_nodes.txt
+  sphere_q16_elements.txt
+  sphere_q16_nodes.txt
+
+
+
+
+
+

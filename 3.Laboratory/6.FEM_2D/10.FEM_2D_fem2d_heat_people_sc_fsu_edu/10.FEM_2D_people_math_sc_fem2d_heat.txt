@@ -1,0 +1,67 @@
+To build the following FEM 2D heat equacion  we using the informacion contain in the links
+
+https://people.sc.fsu.edu/~jburkardt/cpp_src/fem2d_heat/fem2d_heat.html
+https://people.sc.fsu.edu/~jburkardt/cpp_src/fem2d_heat_test/fem2d_heat_test.html
+https://people.math.sc.edu/Burkardt/m_src/contour_sequence4/contour_sequence4.html
+
+%-------------------------------------------
+1.fem2d_heat_cpp/
+%-------------------------------------------
+Compile:
+    chmod +x fed2d_heat.sh
+    ./fem2d_heat.sh
+ 
+fem2d_heat.sh
+	g++ -c -g -Wall fem2d_heat.cpp
+
+move fem2d_heat.o to 5.fem2d_heat_test/
+	mv fem2d_heat.o ../5.fem2d_heat_test/.
+%-------------------------------------------
+5.fem2d_heat_test/ 
+here we build fem2d_heat_test with fem2d_heat.o + fem2d_heat_test.o
+%-------------------------------------------
+Compile:
+	chmod +x fem2d_heat_test.sh
+	./fem2d_heat_test.sh
+
+fem2d_heat_test.sh - Build the executable with the objects files
+	g++ -c -g -Wall fem2d_heat_test.cpp
+	g++ fem2d_heat.o fem2d_heat_test.o
+	chmod ugo+x a.out
+	mv a.out fem2d_heat_test
+
+%-------------------------------------------
+Execute fem2d_heat_test
+%-------------------------------------------
+Need:
+	square_elements.txt
+	square_nodes.txt
+    fem2d_heat_test
+
+Execute, the run create multiples txt 10 files : 
+	./fem2d_heat_test square > fem2d_heat_test.txt
+
+	square_u0000.txt
+	 ... 
+	square_u0005.txt
+	 ...
+	square_u0010.txt,
+%-------------------------------------------
+/6.contour_sequence4_test/
+Plot using python, the run create 10 png files, one for each u0000#.txt : 
+%-------------------------------------------
+Need:
+	square_nodes.txt
+	square_u0000.txt
+	 ... 
+	square_u0005.txt
+	 ...
+	square_u0010.txt,
+
+$ python contour_sequence4.py square_nodes.txt square_u0000.txt
+
+
+
+
+
+
