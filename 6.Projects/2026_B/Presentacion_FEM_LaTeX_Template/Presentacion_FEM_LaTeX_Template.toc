@@ -1,0 +1,4 @@
+\babel@toc {spanish}{}\relax 
+\beamer@sectionintoc {1}{Introducci\IeC {\'o}n}{3}{0}{1}
+\beamer@sectionintoc {2}{Ejemplos}{4}{0}{2}
+\beamer@sectionintoc {3}{References}{6}{0}{3}

@@ -1,0 +1,83 @@
+1.grupo 1 : Score 4
+Uno solo autor: Solano Parra Victor Raúl
+# No uso el templete proporcionado para el proyecto.
+# El template del articulo (archivo *.tex) no esta en el folder
+# Muestra bibliografia (2 referensias ) pero no la usa  y hace referecia en ninguna seccion de texto en el articulo.
+# Proyecto incompleto, se asignaron 2 tipos de grieta, solo muestra resultados de una grieta.
+# La evolucion del crecimiento de la grieta es insistente con los esperado. 
+# El proyecto no muestra ningun codigo en python, no se puede demuestra de donde salieron las figuras y los resultados mostrados.
+
+2.grupo 2 Score 3
+Tres  autores : Lapas Moreno, Diego Alonso; Cabello Padilla, Diego Alex ;  Solis Chumán, Esteban Javier
+# No uso el templete proporcionado para el proyecto.
+# Muestra bibliografia (5 referensias ) pero no la usa  y hace referecia  en ninguna seccion de texto  en el articulo.
+Proyecto incompleto, se asignaron 2 tipos de grieta, el articulo no muestra ninguno de los  resultados de las grieta (ninguna figura en el articulo).
+En articulo tampoco muestras los graficos de la evolucion del crecimiento de la grietas esperado. 
+El proyecto muestra codigo en python, dificil de encotrar y mal organizado, no se identifica en codigo principal.
+No describe el codigo en el articulo no se sabe que figura y que graficos son las salidas o resultados, no se puede demuestra de donde salieron las figuras y los resultados mostrados.
+
+3.grupo 3 : Score 7
+Tres  autores : Yeferson Alexsander Villanueva Arostegui;Cristhiam Josue Villa Sandoval,Angello Fabrizio Arévalo Gonzales
+# Uso el templete proporcionado para el proyecto.
+# Muestra bibliografia (varias  referensias ) 
+# El articulo  muestra los  resultados de las grietas.
+# En articulo muestras los graficos de la evolucion del crecimiento esperado de la grietas  
+El proyecto muestra codigo en python
+
+
+5.grupo 5 : Score 6
+Tres  autores : Rios Velasque Billy Jordan; Mamani Monge Fredy; Vargas Gil Juan Diego
+# Uso el templete proporcionado para el proyecto.
+# Muestra bibliografia (varias  referensias ) 
+Proyecto incompleto, se asignaron 2 tipos de grieta, solo muestra resultados completos de una grieta.
+En articulo muestra un grafico de la evolucion del crecimiento esperado de una grieta.  
+El proyecto muestra codigo en python.
+
+6.grupo 6 : Score 4
+Tres  autores : Misael Roman Soto; Edmundo Frank Paico Valverde;  Marcos Armis Niño de Guzmán
+# Uso el templete proporcionado para el proyecto.
+# Muestra bibliografia (3 referensias) 
+Proyecto incompleto, se asignaron 2 tipos de grieta, solo muestra resultados completos de una grieta.
+En articulo muestra un grafico de la evolucion del crecimiento esperado de una grieta, resultados incosistentes con lo esperado 
+El proyecto muestra codigo en python, mal organizado, sin el formato correcto.
+
+7.grupo 7 : Score 2
+Tres  autores : ALVARADO QUINTANA RAUL FERNANDO; APONTE RODRIGUEZ NELSON WINER; RAMIREZ ROSADIO CARLOS FABIANO
+# No uso el templete proporcionado para el proyecto.
+# El articulo esta pecimamente editado, muy baja calidad de presentacio
+# Muestra bibliografia (varias referensias ) pero no la usa  y hace referecia en ninguna seccion de texto en el articulo.
+La evolucion del crecimiento de la grieta es insistente con los esperado. 
+El proyecto muestra codigo en python, mal organizado
+
+8.grupo 8 : Score 4
+Tres  autores :Lopez Pintado Michael Jarid; Aranibar Cardenas Eduardo; Chota Rivera Cristhian
+# Uso el templete proporcionado para el proyecto.
+# No Muestra bibliografia (0 referensias) 
+Proyecto incompleto, se asignaron 2 tipos de grieta, solo muestra resultados completos de una grieta.
+El proyecto muestra codigo en python,
+En articulo muestra un grafico de la evolucion del crecimiento esperado de una grieta, resultados incosistentes con lo esperado 
+
+9.grupo 9 : Score 4
+Tres  autores: García Perez Grecia; Rocha Pascacio Alonso; Rivera Curo Rafael
+# Uso el templete proporcionado para el proyecto.
+# Muestra bibliografia (varias  referensias ) 
+El proyecto muestra codigo en python,
+En articulo muestra un grafico de la evolucion del crecimiento esperado de una grieta, resultados incosistentes con lo esperado 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -41,10 +41,14 @@
 \usepackage{epigraph}
 \usepackage{graphicx}
 \usepackage{cancel}
+\usepackage{multirow} %How many rows the cell will cover.
 \usepackage[spanish]{babel}% Lenguage-specific commands
 %\usepackage[english]{babel}
 \usepackage[utf8x]{inputenc} % is no longer required (since 2018)
 \usepackage[T1]{fontenc}% Set the font (output) encodings
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{multirow}
 
 \usepackage{caption}
 \captionsetup[figure]{labelformat=empty}% redefines the caption setup of the figures environment in the beamer class.
@@ -111,7 +115,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Front main page
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\title[MEF-FEM]{Método de los Elementos Finitos (MEF)\cite{} \\
+\title[MEF-FEM]{Método de los Elementos Finitos (MEF)\\
 Finite Element Method (FEM)\\
 CAPITULO ?\\
 \LARGE \textbf{Métodos analíticos aproximados\\
@@ -128,26 +132,28 @@ Facultad de Ingenier\'ia Mec\'anica y de Energ\'ia}
 \begin{frame}
   \titlepage
 \end{frame}
-
+%--------------------------------------------------
 % Diapositiva de contenido
 \begin{frame}{Contenido}
 \tableofcontents
 \end{frame}
-
+%--------------------------------------------------
 \section{Introducción}
+%--------------------------------------------------
 \begin{frame}{Método de Galerkin}
 
 \end{frame}
+%--------------------------------------------------
 \section{Ejemplos}
 \begin{frame}{Ejemplo 1}
 
  \end{frame} 
 
-
+%--------------------------------------------------
 % \begin{frame}{Ejemplo 2}
 % 
 % \end{frame} 
-
+%--------------------------------------------------
 % % Slide: Definition of Software y Types of Software
 %\begin{frame}{Software}
 %\begin{figure}
@@ -156,13 +162,13 @@ Facultad de Ingenier\'ia Mec\'anica y de Energ\'ia}
 %%\caption{Diagrama de una arquitectura de computadora típica.}
 %\end{figure}
 % \end{frame}
-
+%--------------------------------------------------
 \begin{frame}
-  \frametitle{Gracias por su atención}
+  \frametitle{Gracias por su atención} \phantom{\cite{Chandrupatla2000}}
   \centering\LARGE
    \textbf{¿Preguntas?}
 \end{frame}
-
+%--------------------------------------------------
 \section{References}
 \begin{frame}{References}
         %\bibliographystyle{amsalpha}
